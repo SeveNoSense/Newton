@@ -1,4 +1,4 @@
-Código:
+Código(EM Python):
 
 def raiz(x0, tolerance=1e-6, max_iterations=100):
     x = x0
