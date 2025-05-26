@@ -1,0 +1,19 @@
+def raiz(x0, tolerance=1e-6, max_iterations=100):
+    x = x0
+    for i in range(max_iterations):
+        fx = x**2 - 2
+        f_prime_x = 2 * x
+        if f_prime_x == 0:
+            print("Derivada zero, método falhou.")
+            return None
+        x_next = x - fx / f_prime_x
+        if abs(x_next - x) < tolerance:
+            print(f"Convergência alcançada após {i+1} iterações.")
+            return x_next
+        x = x_next
+    print("Número máximo de iterações atingido.")
+    return x
+
+x0 = 1.5
+result = raiz(x0)
+print(result)
