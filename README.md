@@ -1,6 +1,6 @@
 Código:
 
-def newton_raphson_sqrt2(x0, tolerance=1e-6, max_iterations=100):
+def raiz(x0, tolerance=1e-6, max_iterations=100):
     x = x0
     for i in range(max_iterations):
         fx = x**2 - 2
@@ -17,9 +17,9 @@ def newton_raphson_sqrt2(x0, tolerance=1e-6, max_iterations=100):
     return x
 
 x0 = 1.5
-result = newton_raphson_sqrt2(x0)
-print(f": {result}")
-print(f"Erro absoluto (comparado com math.sqrt(2)): {abs(result - 1.4142135623730951)}")
+result = raiz(x0)
+print(result)
+
 
 
 Explicação: Em
